@@ -1,0 +1,63 @@
+.bg {
+    background-color: red;
+    height: 100vh;
+}
+
+.bg-green {
+    background-color: green;
+    height: 100vh;
+}
+
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide the default checkbox */
+  .switch input {
+    display: none;
+  }
+  
+  /* Slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  
+  /* Circle */
+  .slider::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  /* ON state */
+  input:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+  /* Move the circle */
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
