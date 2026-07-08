@@ -1,13 +1,22 @@
-import React from 'react'
-import "./Components/App.css"
+import React, { useState } from 'react'
+import "./Test.css"
+
 const App = () => {
     const [hamza, setHamza] = useState(true)
-    return (
-        <div>
-            <h1>Hello World</h1>
-            <h2> hello again</h2>
-        </div>
-    )
+const handleToggle = ()=>{
+setHamza(!false)
 }
 
-export default App
+    return (
+        <div className={hamza === true ?  'bg' : 'bg-green'}>
+            <div className="container">
+                <label className="switch">
+                    <input type="checkbox"  onChange={handleToggle}/>
+                    <span className="slider"></span>
+                </label>
+            </div>
+        </div>
+    );
+}
+
+export default App;
